@@ -5,29 +5,30 @@ import ArticleCover from "@/components/ui/ArticleCover";
 export default function BlogCard({ post, variant = "standard", number }) {
   if (variant === "compact") {
     return (
-      <article className="group grid grid-cols-[2.25rem_1fr_auto] gap-4 border-b border-line py-5 sm:py-6">
-        <span className="font-heading pt-1 text-xs text-[#92928c]">{number}</span>
-        <div>
-          <p className="text-xs font-semibold tracking-[0.08em] text-brand-500 uppercase">
-            {post.category}
-          </p>
-          <h3 className="mt-2 text-lg leading-6 font-medium tracking-[-0.02em] text-ink-950">
-            <Link
-              href={`/blog/${post.slug}`}
-              className="transition-colors hover:text-brand-500 focus-visible:outline-2 focus-visible:outline-brand-500"
-            >
+      <article className="border-b border-line">
+        <Link
+          href={`/blog/${post.slug}`}
+          className="group grid cursor-pointer grid-cols-[2.25rem_1fr_auto] gap-4 py-5 transition-colors hover:bg-brand-50 focus-visible:bg-brand-50 focus-visible:outline-2 focus-visible:outline-brand-500 sm:py-6"
+          aria-label={`Read ${post.title}`}
+        >
+          <span className="font-heading pt-1 text-xs text-[#92928c]">{number}</span>
+          <div>
+            <p className="text-xs font-semibold tracking-[0.08em] text-brand-500 uppercase">
+              {post.category}
+            </p>
+            <h3 className="mt-2 text-lg leading-6 font-medium tracking-[-0.02em] text-ink-950 transition-colors group-hover:text-brand-500">
               {post.title}
-            </Link>
-          </h3>
-          <p className="mt-2 text-sm text-muted">
-            {post.date} <span aria-hidden="true">/</span> {post.readTime}
-          </p>
-        </div>
-        <ArrowUpRight
-          size={17}
-          className="mt-1 text-[#aaa9a2] transition-colors group-hover:text-brand-500"
-          aria-hidden="true"
-        />
+            </h3>
+            <p className="mt-2 text-sm text-muted">
+              {post.date} <span aria-hidden="true">/</span> {post.readTime}
+            </p>
+          </div>
+          <ArrowUpRight
+            size={17}
+            className="mt-1 text-[#aaa9a2] transition-colors group-hover:text-brand-500"
+            aria-hidden="true"
+          />
+        </Link>
       </article>
     );
   }

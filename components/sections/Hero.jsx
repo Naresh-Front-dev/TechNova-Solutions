@@ -21,7 +21,7 @@ export default function Hero() {
           transition={{ duration: 0.45 }}
         >
           <span className="h-px w-8 bg-brand-500" aria-hidden="true" />
-          Technology partner / Bengaluru, India
+          Technology partner / Karaikal, India
         </motion.p>
 
         <div className="mt-9 grid gap-10 lg:grid-cols-[minmax(0,1.5fr)_minmax(21rem,0.5fr)] lg:items-end lg:gap-16">
