@@ -1,38 +1,45 @@
+import aiBusinessImage from "@/public/images/blog/ai-business.svg";
+import cloudAppsImage from "@/public/images/blog/cloud-apps.svg";
+import digitalTransformationImage from "@/public/images/blog/digital-transformation.svg";
+import mobileFirstImage from "@/public/images/blog/mobile-first.svg";
+import modernWebImage from "@/public/images/blog/modern-web.svg";
+import userExperienceImage from "@/public/images/blog/user-experience.svg";
+
 export const BLOG_API_URL = "https://jsonplaceholder.typicode.com/posts";
 
 const blogVisuals = [
   {
-    image: "/images/blog/modern-web.svg",
+    image: modernWebImage,
     imageAlt: "A browser interface with code and connected web components",
     category: "Engineering",
     date: "August 28, 2026",
   },
   {
-    image: "/images/blog/ai-business.svg",
+    image: aiBusinessImage,
     imageAlt: "Connected AI nodes forming an intelligent business network",
     category: "Artificial Intelligence",
     date: "August 18, 2026",
   },
   {
-    image: "/images/blog/cloud-apps.svg",
+    image: cloudAppsImage,
     imageAlt: "Cloud platform connected to scalable application services",
     category: "Cloud",
     date: "August 9, 2026",
   },
   {
-    image: "/images/blog/user-experience.svg",
+    image: userExperienceImage,
     imageAlt: "Interface panels arranged into an accessible user experience",
     category: "Design",
     date: "July 30, 2026",
   },
   {
-    image: "/images/blog/mobile-first.svg",
+    image: mobileFirstImage,
     imageAlt: "Mobile interface expanding into tablet and desktop layouts",
     category: "Product Design",
     date: "July 19, 2026",
   },
   {
-    image: "/images/blog/digital-transformation.svg",
+    image: digitalTransformationImage,
     imageAlt: "Business workflow transforming into connected digital services",
     category: "Strategy",
     date: "July 7, 2026",
