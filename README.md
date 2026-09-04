@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TechNova Solutions
+
+A modern, responsive technology-company website built as a frontend technical assessment. The project presents TechNova's services, insights, client feedback, and contact experience in a polished single-page layout.
+
+## Features
+
+- Responsive navigation with an accessible mobile menu
+- Hero, About, Services, Blog, Testimonials, Contact, and Footer sections
+- Six service cards rendered from local data
+- First six JSONPlaceholder posts fetched with TanStack Query
+- Loading, error, retry, and cached blog states
+- Editorial article covers generated from each post's metadata
+- Pre-generated `/blog/[slug]` detail routes for the API posts
+- Three customer testimonial cards
+- Client-side contact form validation with field-level feedback
+- Motion-powered hero, logo, button, card, and scroll-reveal animations
+- Next.js Metadata API and generated Open Graph artwork
+- Semantic HTML, keyboard focus states, and reduced-motion support
+
+## Tech Stack
+
+- Next.js 16 with the App Router
+- React 19
+- JavaScript
+- Tailwind CSS 4
+- TanStack Query 5
+- Motion for React 13 (Framer Motion)
+- Space Grotesk headings and Manrope body typography
+- Lucide React icons
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository and install its dependencies:
+
+```bash
+git clone YOUR_REPOSITORY_URL
+cd technova-solutions
+npm install
+```
+
+Start the local development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in a browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev
+npm run lint
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```text
+app/                 Routes, metadata, layout, and global styles
+components/layout/   Navbar and footer
+components/sections/ Landing-page sections
+components/ui/       Reusable cards, links, and section headings
+data/                Services, blog posts, and testimonials
+public/images/       Local website artwork
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Form Behavior
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The contact form validates all fields in the browser. It demonstrates the required user experience with clear errors and a success state; it does not send data to a backend.
 
-## Deploy on Vercel
+## Blog Data
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The Blog section uses TanStack Query's `useQuery` to fetch `https://jsonplaceholder.typicode.com/posts`. The first six results are formatted for the editorial article layout. Each API title is converted into a URL-safe slug used by the dynamic blog route.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+The application is ready for deployment on Vercel. Connect the repository in Vercel and use the standard Next.js build settings.
+
+Set `NEXT_PUBLIC_SITE_URL` to the final production origin so generated social metadata uses the live address:
+
+```text
+NEXT_PUBLIC_SITE_URL=https://your-production-domain.com
+```
+
+Verify the generated production URL after deployment.

@@ -1,0 +1,15 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="a" x1="110" y1="71" x2="1062" y2="631" gradientUnits="userSpaceOnUse"><stop stop-color="#07162F"/><stop offset="1" stop-color="#174560"/></linearGradient><filter id="s"><feDropShadow dy="24" stdDeviation="25" flood-opacity=".3"/></filter></defs>
+  <rect width="1200" height="675" rx="36" fill="url(#a)"/>
+  <circle cx="190" cy="545" r="208" fill="#22D3EE" fill-opacity=".08"/><circle cx="1030" cy="90" r="210" fill="#22D3EE" fill-opacity=".07"/>
+  <g filter="url(#s)"><rect x="451" y="70" width="298" height="535" rx="48" fill="white"/></g>
+  <rect x="477" y="103" width="246" height="452" rx="27" fill="#EAFBFD"/>
+  <rect x="548" y="85" width="104" height="9" rx="4.5" fill="#8494A5"/>
+  <rect x="503" y="134" width="194" height="112" rx="22" fill="#0891B2"/>
+  <circle cx="550" cy="181" r="21" fill="white" fill-opacity=".9"/><rect x="588" y="166" width="79" height="11" rx="5.5" fill="white"/><rect x="588" y="191" width="55" height="8" rx="4" fill="#B5F0FA"/>
+  <rect x="503" y="277" width="194" height="17" rx="8.5" fill="#173252"/><rect x="503" y="315" width="151" height="11" rx="5.5" fill="#9AACBD"/><rect x="503" y="345" width="177" height="11" rx="5.5" fill="#C2CFDB"/>
+  <rect x="503" y="396" width="90" height="91" rx="18" fill="white"/><rect x="607" y="396" width="90" height="91" rx="18" fill="white"/>
+  <circle cx="548" cy="430" r="14" fill="#22D3EE"/><circle cx="652" cy="430" r="14" fill="#0891B2"/><rect x="523" y="458" width="50" height="7" rx="3.5" fill="#9AACBD"/><rect x="627" y="458" width="50" height="7" rx="3.5" fill="#9AACBD"/>
+  <path d="M332 329H408" stroke="#22D3EE" stroke-width="9" stroke-linecap="round"/><path d="M792 329H868" stroke="#22D3EE" stroke-width="9" stroke-linecap="round"/><path d="M382 303L408 329L382 355M818 303L792 329L818 355" stroke="#22D3EE" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="147" y="197" width="185" height="266" rx="28" stroke="#527087" stroke-width="7"/><rect x="868" y="154" width="224" height="350" rx="24" stroke="#527087" stroke-width="7"/>
+</svg>

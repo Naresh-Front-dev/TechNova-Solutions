@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
+@theme {
+  --color-ink-950: #171717;
+  --color-ink-900: #242422;
+  --color-ink-800: #373735;
+  --color-brand-50: #edf3f0;
+  --color-brand-100: #dbe9e4;
+  --color-brand-200: #b8cfc7;
+  --color-brand-400: #4b806e;
+  --color-brand-500: #225c4b;
+  --color-brand-600: #17473a;
+  --color-surface: #f7f7f2;
+  --color-paper: #ffffff;
+  --color-muted: #666666;
+  --color-line: #deded8;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
+  --background: #f7f7f2;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+a,
+button,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  outline-offset: 4px;
+}
+
+::selection {
+  background: #dbe9e4;
+  color: #171717;
+}
+
+.field-control {
+  width: 100%;
+  border: 1px solid #deded8;
+  border-radius: 0.25rem;
+  background: #ffffff;
+  padding: 0.85rem 0.95rem;
+  color: #171717;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.field-control::placeholder {
+  color: #92928c;
+}
+
+.field-control:focus {
+  border-color: #225c4b;
+  box-shadow: 0 0 0 3px rgba(34, 92, 75, 0.1);
+  outline: none;
+}
+
+.field-control[aria-invalid="true"] {
+  border-color: #e05252;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
