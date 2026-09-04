@@ -2,6 +2,10 @@
 
 A modern, responsive technology-company website built as a frontend technical assessment. The project presents TechNova's services, insights, client feedback, and contact experience in a polished single-page layout.
 
+## Live Demo
+
+[View the live website](https://naresh-front-dev.github.io/TechNova-Solutions/)
+
 ## Features
 
 - Responsive navigation with an accessible mobile menu
@@ -33,8 +37,8 @@ A modern, responsive technology-company website built as a frontend technical as
 Clone the repository and install its dependencies:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
-cd technova-solutions
+git clone https://github.com/Naresh-Front-dev/TechNova-Solutions.git
+cd TechNova-Solutions
 npm install
 ```
 
@@ -52,7 +56,7 @@ Open [http://localhost:3000](http://localhost:3000) in a browser.
 npm run dev
 npm run lint
 npm run build
-npm start
+npx serve out
 ```
 
 ## Project Structure
@@ -76,12 +80,4 @@ The Blog section uses TanStack Query's `useQuery` to fetch `https://jsonplacehol
 
 ## Deployment
 
-The application is ready for deployment on Vercel. Connect the repository in Vercel and use the standard Next.js build settings.
-
-Set `NEXT_PUBLIC_SITE_URL` to the final production origin so generated social metadata uses the live address:
-
-```text
-NEXT_PUBLIC_SITE_URL=https://your-production-domain.com
-```
-
-Verify the generated production URL after deployment.
+The site is exported as static HTML and deployed to GitHub Pages by the workflow in `.github/workflows/deploy-pages.yml`. Every push to `main` creates a fresh deployment.

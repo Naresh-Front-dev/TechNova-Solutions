@@ -5,6 +5,10 @@ import ArticleCover from "@/components/ui/ArticleCover";
 import BlogCard from "@/components/ui/BlogCard";
 import { fetchBlogPosts } from "@/data/blogs";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const posts = await fetchBlogPosts();
   return posts.map((post) => ({ slug: post.slug }));
@@ -25,7 +29,7 @@ export async function generateMetadata({ params }) {
       title: post.title,
       description: post.description,
       type: "article",
-      images: [{ url: "/opengraph-image", alt: "TechNova Solutions" }],
+      images: [{ url: `${siteUrl}/opengraph-image`, alt: "TechNova Solutions" }],
     },
   };
 }
